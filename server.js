@@ -9,10 +9,4 @@ app.post('/upload', fileHandler, function(req,res){
 })
 
 
-app.route('/*')
-  .get(function(req, res) {
-    res.sendFile(path.resolve('./index.html'));
-  });
-
-
 module.exports = app;
