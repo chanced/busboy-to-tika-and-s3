@@ -1,0 +1,26 @@
+{
+  "name": "demoing-s3-tika=busboy-express",
+  "version": "0.0.1",
+  "description": "this is a quick and dirty demonstration of how to upload a file to s3 and parse it with tika without saving a local copy using express 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec test.js",
+  },
+  "author": "Chance Dinkins",
+  "dependencies": {
+    "JSONStream": "^1.0.6",
+    "aws-sdk": "^2.2.4",
+    "busboy": "^0.2.11",
+    "event-stream": "^3.3.1",
+    "express": "^4.13.3",
+    "lodash": "^3.10.1",
+    "open": "0.0.5",
+    "q": "^1.4.1",
+    "request": "^2.63.0",
+    "shortid": "^2.2.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "supertest": "^1.1.0"
+  }
+}
