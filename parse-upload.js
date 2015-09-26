@@ -67,7 +67,7 @@ module.exports = function(req, res, next) {
   var uploads = []
   var busboy = new Busboy({ headers: req.headers });
 
-  var process = function(fieldname, file, filename, encoding, mimetype){
+  var processFile = function(fieldname, file, filename, encoding, mimetype){
     var actions = [
       upload(custom || shortid, filename, file),
       parse(file)
@@ -78,7 +78,7 @@ module.exports = function(req, res, next) {
     }))
   }
 
-  busboy.on('file', process)
+  busboy.on('file', processFile)
   busboy.on('finish', function(){
     req.uploads = uploads
     next()
