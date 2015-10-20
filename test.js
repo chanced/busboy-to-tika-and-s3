@@ -16,8 +16,7 @@ describe('uploading files', function() {
     .post('/upload')
     .attach('doc1', 'doc1.pdf')
     .expect(200)
-    .expect(function(res){
-    })
+    .expect(hasS3)
     .expect(hasTika)
     .end(done);
 
