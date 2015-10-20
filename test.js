@@ -24,7 +24,7 @@ describe('uploading files', function() {
       if (!('s3' in res.body)) return "missing s3 details";
     }
     function hasTika(res) {
-      if (!('tiks' in res.body)) return "missing tika details";
+      if (!('tika' in res.body)) return "missing tika details";
     }
 
   });
